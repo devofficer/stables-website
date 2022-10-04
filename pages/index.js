@@ -22,9 +22,6 @@ export default function Home() {
             Coming Soon!
         </p>
       </main>
-
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
 }
