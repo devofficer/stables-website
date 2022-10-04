@@ -30,7 +30,7 @@ export default function Products() {
         </h1>
 
         <section className={styles.grid}>
-          <h2 className={styles.title}>Products</h2>
+          <h2 className="text-stables-orange">Products</h2>
           <p className={styles.description}>Exercitation incididunt occaecat deserunt deserunt. Aute cillum nisi cupidatat exercitation veniam proident deserunt laboris ad ex enim enim esse dolor voluptate. Occaecat excepteur pariatur consectetur proident in veniam aliquip commodo ipsum ex. Velit tempor laborum sunt esse duis aliquip et. Qui ad in do. Sunt officia consectetur fugiat. Consequat consequat anim reprehenderit. Laborum culpa ad aliquip est excepteur incididunt ex. Ut ex eu irure anim sint ullamco qui laboris. Reprehenderit consectetur esse aute ex duis sit officia magna sint consectetur excepteur pariatur cillum aliquip aliqua.</p>
         </section>
 

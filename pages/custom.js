@@ -1,6 +1,4 @@
 import Head from "next/head"
-import Image from "next/image"
-import styles from "../styles/Home.module.css"
 import Header from "../src/components/Header"
 import Footer from "../src/components/Footer"
 import React, { Suspense, useRef, useState, useEffect } from "react"
@@ -13,26 +11,6 @@ import {
 } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
-
-// export function Product({ product }) {
-//   return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Stables</title>
-//         <meta name="description" content="Stables is The Cone Company" />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <Header />
-
-//       <main className={styles.main}>
-
-//       </main>
-
-//       <Footer />
-//     </div>
-//   )
-// }
 
 const state = proxy({
   current: null,
@@ -73,7 +51,7 @@ function Cone() {
     document.body.style.cursor = `url('data:image/svg+xml;base64,${btoa(
       hovered ? cursor : auto
     )}'), auto`
-  }, [hovered])
+  }, [hovered, snap.items])
 
   // Using the GLTFJSX output here to wire in app-state and hook up events
   return (
@@ -150,13 +128,16 @@ function Cone() {
 function Picker() {
   const snap = useSnapshot(state)
   return (
-    <div style={{ display: snap.current ? "block" : "none" }}>
+    <div
+      style={{ display: snap.current ? "block" : "none" }}
+      class="absolute float-right m-20"
+    >
+      <h1>{snap.current}</h1>
       <HexColorPicker
         className="picker"
         color={snap.items[snap.current]}
         onChange={(color) => (state.items[snap.current] = color)}
       />
-      <h1>{snap.current}</h1>
     </div>
   )
 }
@@ -164,15 +145,25 @@ function Picker() {
 export default function Custom() {
   return (
     <>
+      <Head>
+        <title>Stables - Cone-figurator</title>
+        <meta name="description" content="Build a custom cone " />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
+
       <main class="w-screen h-screen">
-        <Canvas
-          shadows
-          dpr={[1, 2]}
-          camera={{ position: [0, 0, 4], fov: 50 }}
-          class="w-screen h-screen"
-        >
+        <div class="w-screen text-center">
+        <h1 class="justify-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Build your perfect cone.
+        </h1>
+        </div>
+
+        <Picker />
+        <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 50 }}>
           <ambientLight intensity={0.7} />
+
           <spotLight
             intensity={0.5}
             angle={0.1}
@@ -180,6 +171,7 @@ export default function Custom() {
             position={[10, 15, 10]}
             castShadow
           />
+
           <Suspense fallback={null}>
             <Cone />
             <Environment preset="city" />
@@ -188,11 +180,12 @@ export default function Custom() {
               position={[0, -0.8, 0]}
               opacity={0.25}
               width={10}
-              height={10}
+              height={3}
               blur={1.5}
               far={0.8}
             />
           </Suspense>
+
           <OrbitControls
             minPolarAngle={Math.PI / 2}
             maxPolarAngle={Math.PI / 2}
@@ -201,7 +194,6 @@ export default function Custom() {
           />
         </Canvas>
       </main>
-      <Picker />
 
       <Footer />
     </>
