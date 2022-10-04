@@ -1,7 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'x-robots-tag',
+            value: 'noindex, nofollow',
+          }
+        ],
+      },
+    ]
+  },
 }
-
-module.exports = nextConfig
