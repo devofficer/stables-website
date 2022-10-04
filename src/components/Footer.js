@@ -2,8 +2,6 @@ import { useRouter } from "next/router"
 import React from "react"
 
 const Footer = () => {
-
-
   return (
     <footer class="bg-white dark:bg-gray-900">
       <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
@@ -36,7 +34,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
-            Get in touch
+            Socials
           </h2>
           <ul class="text-gray-500 dark:text-gray-400">
             <li class="mb-4">
@@ -56,7 +54,7 @@ const Footer = () => {
             </li>
             <li class="mb-4">
               <a href="#" class="hover:underline">
-                Contact Us
+                Instagram
               </a>
             </li>
           </ul>
