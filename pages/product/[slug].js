@@ -1,6 +1,3 @@
-import Head from "next/head"
-import Image from "next/image"
-import styles from "../../styles/Home.module.css"
 import Header from "../../src/components/Header"
 import Footer from "../../src/components/Footer"
 import React, { Suspense, useRef, useState, useEffect } from "react"
@@ -13,26 +10,6 @@ import {
 } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
-
-// export function Product({ product }) {
-//   return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Stables</title>
-//         <meta name="description" content="Stables is The Cone Company" />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <Header />
-
-//       <main className={styles.main}>
-        
-//       </main>
-
-//       <Footer />
-//     </div>
-//   )
-// }
 
 const state = proxy({
   current: null,

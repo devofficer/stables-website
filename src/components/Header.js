@@ -1,14 +1,7 @@
-import { useRouter } from "next/router"
 import React from "react"
 import Link from "next/link"
 
 const Header = () => {
-  const router = useRouter()
-
-  const handleHomeClick = () => {
-    router.push("/")
-  }
-
   return (
     <header>
       <nav className="">
@@ -37,7 +30,7 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                 clip-rule="evenodd"
               ></path>
