@@ -21,7 +21,7 @@ export default function Home() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 301.7552 70.3059"
-            className="fill-stables-orange w-full h-full"
+            className="w-full h-full fill-orange-700"
           >
             <path d="M0,55.5816c0-7.4608,.4905-10.896,3.5335-10.896,2.749,0,2.749,1.5706,4.5153,5.3989,4.6136,10.1107,10.9943,14.5277,17.6698,14.5277,6.7729,0,11.2882-3.73,11.2882-8.9323,0-18.1603-33.9638-6.3807-33.9638-34.4551C3.043,9.7391,13.3494,.0207,27.1909,.0207,39.9523,.0207,46.8235,4.6351,46.8235,11.9968c0,5.8902-.1965,7.9513-2.6507,7.9513-2.2576,0-2.9447-.9818-4.8101-4.3188-4.1222-7.6573-7.46-10.3072-13.1537-10.3072-5.8894,0-10.3072,3.8283-10.3072,8.9323,0,16.394,35.2405,7.0677,35.2405,33.5724,0,13.0554-9.8159,22.479-26.3073,22.479-13.4484,0-24.835-5.4971-24.835-14.7243Z" />
             <path d="M57.654,54.698V29.9605h-1.6689c-1.4723,0-2.749-1.2758-2.749-2.8464,0-1.4723,1.2766-2.7482,2.749-2.7482h1.2758c5.1049,0,7.166-2.5524,10.4055-8.8349,1.3741-2.6507,4.8101-2.0619,4.8101,1.0793v7.7556h6.3807c1.5706,0,2.8464,1.2758,2.8464,2.7482,0,1.5706-1.2758,2.8464-2.8464,2.8464h-6.3807v23.3634c0,3.1412,1.0801,6.1842,5.2023,6.1842,4.0248,0,5.4971-3.8283,7.6565-3.043,3.436,1.2758-.687,13.8407-13.3494,13.8407-9.0314,0-14.332-6.6747-14.332-15.6078Z" />
@@ -61,12 +61,12 @@ export default function Home() {
               >
                 We’ll never share your details. Read our{" "}
                 <Link href="/privacy">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Privacy Policy
-                </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                  >
+                    Privacy Policy
+                  </a>
                 </Link>
                 .
               </p>
@@ -74,7 +74,7 @@ export default function Home() {
             <div class="mb-6">
               <button
                 type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 focus:outline-none dark:focus:ring-orange-800"
               >
                 Sign Up
               </button>

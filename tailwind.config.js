@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   content: ["./src/**/*.{html,js}", "./pages/**/*.{html,js}"],
-  theme: {
+  theme: {},
+  extend: {
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      stables: {
-        orange: "#F05A28",
-        blue: "#0070F3",
-      },
+      stable_orange: "#F05A28",
+      stable_blue: "#0070F3",
     },
-    extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
 }
