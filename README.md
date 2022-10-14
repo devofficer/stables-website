@@ -11,6 +11,10 @@ This is the source code for the Stables website. It is built using next.js and h
 - <https://flowbite.com/docs/forms/input-field/>
 - <https://braydoncoyer.dev/blog/create-a-newsletter-subscription-form-with-next.js-api-routes-and-the-twitter-revue-api>
 
+## Inspiration
+
+- <https://offscreencanvas.com/issues/011/>
+
 ## Cone-figurator
 
 - Generate custom URLs that load the cone configurator with the specified parameters
