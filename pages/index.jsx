@@ -41,15 +41,15 @@ export default function Home() {
           <form className={styles.form} action="https" method="POST">
             <div class="mb-6">
               <label
-                for="helper-text"
+                for="email-newsletter"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                Your email
+                Email Newsletter
               </label>
               <input
                 type="email"
-                id="helper-text"
-                aria-describedby="helper-text-explanation"
+                id="email-newsletter"
+                aria-describedby="Email address for newsletter"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Your email"
                 autoComplete="email"
@@ -60,13 +60,11 @@ export default function Home() {
                 class="mt-2 text-sm text-gray-500 dark:text-gray-400"
               >
                 We’ll never share your details. Read our{" "}
-                <Link href="/privacy">
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Privacy Policy
-                  </a>
+                <Link
+                  href="/privacy"
+                  class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
+                  Privacy Policy
                 </Link>
                 .
               </p>
@@ -98,8 +96,9 @@ export default function Home() {
           </p>
         </section>
       </main>
-
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }
