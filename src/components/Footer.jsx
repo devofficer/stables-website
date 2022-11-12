@@ -3,7 +3,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="">
       <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>
           <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
@@ -60,8 +60,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div class="py-6 px-4 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
+      <div class="py-6 px-4 md:flex md:items-center md:justify-between border-t-2 border-stablesOrange">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center text-stablesOrange">
           © 2022 Stables™
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
