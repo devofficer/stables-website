@@ -14,10 +14,10 @@ module.exports = {
   extend: {
     colors: {
       stablesOrange: "#F05A28",
-      stablesBlue: "#0070F3",
+      stablesBlue: "#C3E4D9",
     },
     fontFamily: {
-      sans: ["Mellow", "sans-serif"],
+      mellow: ["Mellow", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/forms")],

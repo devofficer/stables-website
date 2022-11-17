@@ -25,13 +25,6 @@
 
 @font-face {
   font-family: "Mellow";
-  src: url("/fonts/made-mellow-light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Mellow";
   src: url("/fonts/made-mellow-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -44,13 +37,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mellow";
+  src: url("/fonts/made-mellow-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Mellow", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.06rem;
 }
 

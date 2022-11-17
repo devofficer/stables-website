@@ -4,12 +4,13 @@ import Link from "next/link"
 const Header = () => {
   return (
     <header>
-      <nav className="">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <Link href="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Stables
-            </span>
+      <nav className="container">
+        <div className="">
+          <Link
+            href="/"
+            className="self-center text-2xl font-semibold whitespace-nowrap text-stablesOrange md:hidden"
+          >
+            Stables
           </Link>
           <button
             data-collapse-toggle="navbar-default"
@@ -33,30 +34,44 @@ const Header = () => {
               ></path>
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+          <div
+            className="hidden w-full md:block md:w-full md:mx-auto "
+            id="navbar-default"
+          >
+            <ul className="flex flex-col p-4 md:flex-row">
               <li>
-                <Link
-                  href="/"
-                  className="block py-2 pr-4 pl-3 text-white"
-                  aria-current="page"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="block py-2 pr-4 pl-3">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="block py-2 pr-4 pl-3">
+                <Link href="/about" className="block py-2 px-4 font-regular">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="block py-2 pr-4 pl-3">
+                <Link href="/blog" className="block py-2 px-4 font-regular">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="block py-2 px-4 font-regular">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <h1 className="self-center text-4xl font-semibold whitespace-nowrap text-stablesOrange mx-10">
+                  <Link href="/">Stables</Link>
+                </h1>
+              </li>
+              <li>
+                <Link href="/products" className="block py-2 px-4 font-regular">
+                  Cones
+                </Link>
+              </li>
+              <li>
+                <Link href="/blunts" className="block py-2 px-4 font-regular">
+                  Blunts
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom" className="block py-2 px-4 font-regular">
+                  Custom
                 </Link>
               </li>
             </ul>
