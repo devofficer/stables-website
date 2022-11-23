@@ -29,7 +29,7 @@ const ptComponents = {
   },
 }
 
-const Post = ({ post }) => {
+const Post = ({ post = {} }) => {
   const {
     title = "Missing title",
     name = "Missing name",

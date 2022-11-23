@@ -27,7 +27,7 @@ const ptComponents = {
   },
 }
 
-const Product = ({ product }) => {
+const Product = ({ product = {} }) => {
   const {
     title = "Missing",
     industryName,
