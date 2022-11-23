@@ -9,13 +9,7 @@ import Footer from "../../src/components/Footer"
 
 const Blog = ({ post }) => {
   const {
-    title = "Missing",
-    slug = "sd",
-    mainImage = "",
-    body = "",
-    categories = "",
-    publishedAt = "",
-    author = "",
+    title = "Missing",    
   } = post
   return (
     <div>
@@ -29,12 +23,13 @@ const Blog = ({ post }) => {
 
       <main>
         <article>
-          <h2>{post.title}</h2>
-          {post.slug}
-          <div>
-            
-          </div>
-          <div><p>{post.body}</p></div>
+          <h1 className="text-stablesOrange text-7xl font-ultralight text-left m-8">
+            {title}
+          </h1>
+
+          
+          
+          <div></div>
         </article>
       </main>
 
