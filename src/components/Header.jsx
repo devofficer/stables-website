@@ -60,7 +60,7 @@ const Header = () => {
                 </h1>
               </li>
               <li>
-                <Link href="/products" className="block py-2 px-4 font-regular">
+                <Link href="/product" className="block py-2 px-4 font-regular">
                   Cones
                 </Link>
               </li>
