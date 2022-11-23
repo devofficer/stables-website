@@ -4,14 +4,36 @@ import Image from "next/image"
 import Header from "../../src/components/Header"
 import Footer from "../../src/components/Footer"
 import imageUrlBuilder from "@sanity/image-url"
+import { PortableText } from "@portabletext/react"
+
+function urlFor(source) {
+  return imageUrlBuilder(client).image(source)
+}
+
+const ptComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null
+      }
+      return (
+        <img
+          alt={value.alt || " "}
+          loading="lazy"
+          src={urlFor(value).width(320).height(240).fit("max").auto("format")}
+        />
+      )
+    },
+  },
+}
 
 const Product = ({ product }) => {
   const {
     title = "Missing",
     industryName,
-    image,
-    description,
-    paperTypes 
+    mainImage,
+    description = [],
+    paperTypes,
   } = product
   return (
     <div>
@@ -27,7 +49,7 @@ const Product = ({ product }) => {
           <div>
             <h2>Cone &middot; {industryName}</h2>
             <h1 className="text-stablesOrange text-7xl font-ultralight text-left m-8">
-              {title}
+              {product.title}
             </h1>
           </div>
           <section className="container flex flex-wrap justify-between items-center mx-auto">
@@ -93,6 +115,20 @@ const Product = ({ product }) => {
                   ))}
                 </ul>
               )} */}
+
+              <PortableText value={description} components={ptComponents} />
+            </div>
+            <div className="flex flex-col">
+              <Image
+                src={urlFor(product.mainImage)
+                  .width(320)
+                  .height(240)
+                  .fit("max")
+                  .auto("format")}
+                width={320}
+                height={240}
+                alt="sd"
+              />
             </div>
           </section>
         </article>
@@ -119,7 +155,7 @@ export async function getStaticProps(context) {
   const { slug = "" } = context.params
   const product = await client.fetch(
     `
-    *[_type == "product" && slug.current == $slug][0] 
+    *[_type == "product" && slug.current == $slug][0]
   `,
     { slug }
   )
